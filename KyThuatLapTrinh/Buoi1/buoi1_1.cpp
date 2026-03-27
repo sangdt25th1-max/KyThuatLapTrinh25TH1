@@ -76,7 +76,7 @@ int main() {
 		}
 		case 3: {
 			int id;
-			cout << "Input ID to remove: ";
+			cout << "Input ID  to remove: ";
 			cin >> id;
 			RemovePerson(list, id);
 			break;
