@@ -11,6 +11,7 @@ struct LinkedList {
 	bool Remove(int id);
 	bool Update(int id);
 	void Find(string userName);
+
 };
 
 template <typename T>
@@ -28,6 +29,39 @@ void LinkedList<T>::Find(string userName) {
 		item = item->next;
 	}
 	cout << " No account found" << endl;
+}
+
+template <typename T>
+void LinkedList<T>::Import(string fileName) {
+	ifstream outFile(fileName, ios::binary);
+	if (!outFile) {
+		cout << "Error opening file for reading" << endl;
+		return;
+	}
+	Node<T>* item = head;
+		while (item != NULL) {
+			if (outFile.read(reinterpret_cast<char*>(&item), sizeof(T))) {
+				Add(item);
+			}
+			outFile.close();
+		}
+}
+
+template <typename T>
+void LinkedList<T>::Import(string fileName) {
+	ifstream inFile(fileName, ios::binary);
+	if (!inFile) {
+		cout << "Error opening file for reading" << endl;
+		return;
+	}
+	Node<T>* item = head;
+	T item
+		while (item != NULL) {
+			if (inFile.read(reinterpret_cast<char*>(&item), sizeof(T))) {
+				Add(item);
+			}
+			inFile.close();
+		}
 }
 
 template <typename T>

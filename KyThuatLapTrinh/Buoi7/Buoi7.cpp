@@ -54,15 +54,21 @@ int main()
 			break;
 		}
 		case 5: {
-
+			string userName;
+			cout << "Enter account name: ";
+			cin.ignore();
+			getline(cin, userName);
+			accounts.Find(userName);
 			break;
 		}
 		case 6: {
-
+			accounts.Export("25TH!.dla");
+			cout << "Exported successfully" << endl;
 			break;
 		}
 		case 7: {
-
+			accounts.Import("25TH!.dla");
+			cout << "Imported successfully" << endl;
 			break;
 		}
 		case 0: {
