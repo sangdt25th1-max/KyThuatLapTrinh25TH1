@@ -18,9 +18,12 @@
     <ClCompile Include="Buoi7.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="123.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="123.h">
+    <ClInclude Include="LinkedList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Account.h">
